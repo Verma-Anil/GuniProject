@@ -15,7 +15,7 @@ namespace GuniThises.web.Data
         public DbSet<Student> Students { get; set; }
         
         
-        //public DbSet<Faculty> Faculty { get; set; }
+        public DbSet<Faculty> Faculty { get; set; }
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -28,6 +28,12 @@ namespace GuniThises.web.Data
 
 
         public DbSet<GuniThises.web.ViewModels.StudentViewModel> StudentViewModel { get; set; }
+        
+        
+        //public DbSet<Faculty> Faculty { get; set; }
+
+
+        public DbSet<GuniThises.web.ViewModels.FacultyViewModel> FacultyViewModel { get; set; }
     }
 
 }

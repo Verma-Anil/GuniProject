@@ -35,10 +35,10 @@ namespace GuniThises.web.Models
         #endregion
 
 
-      /*  #region Navigational Properties to the Faculty Model (1:0 mapping)
+       #region Navigational Properties to the Faculty Model (1:0 mapping)
 
         public Faculty Faculty { get; set; }
 
-        #endregion*/
+        #endregion
     }
 }

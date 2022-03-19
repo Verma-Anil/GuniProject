@@ -4,14 +4,16 @@ using GuniThises.web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GuniThises.web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220319093509_AddedFaculty")]
+    partial class AddedFaculty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -177,25 +179,6 @@ namespace GuniThises.web.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Students");
-                });
-
-            modelBuilder.Entity("GuniThises.web.ViewModels.FacultyViewModel", b =>
-                {
-                    b.Property<Guid>("FacultyUserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("FacultyType")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
-
-                    b.HasKey("FacultyUserId");
-
-                    b.ToTable("FacultyViewModel");
                 });
 
             modelBuilder.Entity("GuniThises.web.ViewModels.StudentViewModel", b =>
