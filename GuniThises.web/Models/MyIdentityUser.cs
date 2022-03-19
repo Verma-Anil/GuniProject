@@ -28,14 +28,14 @@ namespace GuniThises.web.Models
         public bool IsAdminUser { get; set; }
 
 
-      /*  #region Navigational Properties to the Student Model (1:0 mapping)
+        #region Navigational Properties to the Student Model (1:0 mapping)
 
         public Student Student { get; set; }
 
         #endregion
 
 
-        #region Navigational Properties to the Faculty Model (1:0 mapping)
+      /*  #region Navigational Properties to the Faculty Model (1:0 mapping)
 
         public Faculty Faculty { get; set; }
 
