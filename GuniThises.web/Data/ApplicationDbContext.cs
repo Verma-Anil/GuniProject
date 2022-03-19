@@ -10,8 +10,8 @@ namespace GuniThises.web.Data
     public class ApplicationDbContext
         : IdentityDbContext<MyIdentityUser, MyIdentityRole, Guid>
     {
-       /* public DbSet<Department> Departments { get; set; }
-        public DbSet<Student> Students { get; set; }
+       public DbSet<Department> Departments { get; set; }
+        /*public DbSet<Student> Students { get; set; }
         public DbSet<Faculty> Faculty { get; set; }*/
 
 
