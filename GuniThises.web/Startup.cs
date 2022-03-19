@@ -1,10 +1,12 @@
 using GuniThises.web.Data;
 using GuniThises.web.Models;
+using GuniThises.web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -69,6 +71,13 @@ namespace GuniThises.web
                 });
 
             services.AddRazorPages();
+
+            // Register the Customized Email Sender Service 
+            // -- SMTP configuration is in the appsettings.json file.
+            services
+                .AddSingleton<IEmailSender, MyEmailSender>();
+
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
